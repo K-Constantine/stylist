@@ -7,7 +7,7 @@ class StaticStyle extends StatefulWidget {
   final Widget child;
   static StaticStyleState of(BuildContext context) {
     final StyleInherited style =
-        context.inheritFromWidgetOfExactType(StyleInherited);
+        context.dependOnInheritedWidgetOfExactType<StyleInherited>();
     return style?.data;
   }
 
